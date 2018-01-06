@@ -3,7 +3,7 @@ class ChangeAwsCredentials < Formula
   homepage "https://leebriggs.co.uk/"
   url "https://github.com/jaxxstorm/change-aws-credentials/releases/download/v0.2.2/change-aws-credentials_0.2.2_darwin_amd64.tar.gz"
   version "0.2.2"
-  sha256 "cec65deafafc1c10e05a9df28eb0c5e8678c601ed866cdacc53d71fb9d1905c2"
+  sha256 "2263a48e217436945e60c5f165ed6f6de0c3299aeea5f5a5dc4c5f1b826a8b3a"
 
   def install
     bin.install "change-aws-credentials"
