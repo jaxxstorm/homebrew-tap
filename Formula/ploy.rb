@@ -5,16 +5,16 @@
 class Ploy < Formula
   desc "Quickly install applications to Kubernetes with Pulumi"
   homepage "https://leebriggs.co.uk"
-  version "0.0.2-alpha.2"
+  version "0.0.2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/jaxxstorm/ploy/releases/download/v0.0.2-alpha.2/ploy-v0.0.2-alpha.2-darwin-amd64.tar.gz"
-    sha256 "bcbc9c2ea497593ead950620717c75f1f8b7e3459bf41bc270a6aa6bb2aabaf2"
+    url "https://github.com/jaxxstorm/ploy/releases/download/v0.0.2/ploy-v0.0.2-darwin-amd64.tar.gz"
+    sha256 "6dc996aecc2db6c3a8eb58deaa0f10ddeb2eeb607fdfab5bca64560bc586643a"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/jaxxstorm/ploy/releases/download/v0.0.2-alpha.2/ploy-v0.0.2-alpha.2-linux-amd64.tar.gz"
-    sha256 "25282e76af2f6e066dd5c5d6ab2156605fa667de1401440e7317ee3ba1471ea5"
+    url "https://github.com/jaxxstorm/ploy/releases/download/v0.0.2/ploy-v0.0.2-linux-amd64.tar.gz"
+    sha256 "3a125f670ba3aeee8a2929b0901aaf2ae001c0174f43d5d027e080c2f1c93e1f"
   end
 
   def install
