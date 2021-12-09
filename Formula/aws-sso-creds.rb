@@ -3,7 +3,6 @@ class AwsSsoCreds < Formula
   desc "Helper utility to get temporary credentials from AWS SSO"
   homepage "https://leebriggs.co.uk"
   version "1.1.0"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.1.0/aws-sso-creds-v1.1.0-darwin-amd64.tar.gz"

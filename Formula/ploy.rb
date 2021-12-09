@@ -6,7 +6,6 @@ class Ploy < Formula
   desc "Quickly install applications to Kubernetes with Pulumi"
   homepage "https://leebriggs.co.uk"
   version "0.0.3"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/jaxxstorm/ploy/releases/download/v0.0.3/ploy-v0.0.3-darwin-amd64.tar.gz"
