@@ -5,23 +5,43 @@
 class AwsSsoCreds < Formula
   desc "Helper utility to get temporary credentials from AWS SSO"
   homepage "https://leebriggs.co.uk"
-  version "1.2.0"
-  bottle :unneeded
+  version "1.2.1"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.2.0/aws-sso-creds-v1.2.0-darwin-amd64.tar.gz"
-    sha256 "382539082bf1686bd7dcd3a648876d98fb26bd575fc806cba3ae5c5af0049880"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.2.0/aws-sso-creds-v1.2.0-linux-amd64.tar.gz"
-    sha256 "e468112b7ff8f474442e5a6fa9e309d7a21699261881850b98aabb9655719814"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.2.0/aws-sso-creds-v1.2.0-linux-arm64.tar.gz"
-    sha256 "717903fce6bbede3a34947c77d81186f5b48a5df82cff24f60920f1f150d3db0"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.2.1/aws-sso-creds-v1.2.1-darwin-amd64.tar.gz"
+      sha256 "6e7bed6f4f57d0ad06be0f18497eb5f8eb70177ee76f2d6c7d50ff1dbd547c9b"
+
+      def install
+        bin.install "aws-sso-creds"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.2.1/aws-sso-creds-v1.2.1-darwin-arm64.tar.gz"
+      sha256 "c257c3c4ea09d841e7c76529aea0bda765149f75127f04e6759dadaf00990721"
+
+      def install
+        bin.install "aws-sso-creds"
+      end
+    end
   end
 
-  def install
-    bin.install "aws-sso-creds"
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.2.1/aws-sso-creds-v1.2.1-linux-arm64.tar.gz"
+      sha256 "a9e8bc0d897379f9053e7e94e73882af5b06a1474841d2e516fcad68dceaf924"
+
+      def install
+        bin.install "aws-sso-creds"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.2.1/aws-sso-creds-v1.2.1-linux-amd64.tar.gz"
+      sha256 "efc3cb45ad301243a1baadb5e4f46e9058f389a617015aff6c0431276561c971"
+
+      def install
+        bin.install "aws-sso-creds"
+      end
+    end
   end
 end
