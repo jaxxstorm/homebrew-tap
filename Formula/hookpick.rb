@@ -4,6 +4,7 @@ class Hookpick < Formula
   url "https://github.com/jaxxstorm/hookpick/releases/download/v0.2.0/hookpick_0.2.0_darwin_amd64.tar.gz"
   version "0.2.0"
   sha256 "c4b320abaecc17ab2b5aac9ad0f99dbdd408e648f82052691a2334e77249c54f"
+  disable! date: "2022-07-24", because: "unmaintained"
 
   def install
     bin.install "hookpick"
