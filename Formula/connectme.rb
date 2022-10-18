@@ -5,20 +5,22 @@
 class Connectme < Formula
   desc "Quickly connect to your cloud infrastructure"
   homepage "https://leebriggs.co.uk"
-  version "0.0.1"
+  version "0.0.2"
+
+  depends_on "pulumi"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/connectme/releases/download/v0.0.1/connectme-v0.0.1-darwin-arm64.tar.gz"
-      sha256 "ab970c3bcd6fb4cc84d74710ca01cc05d6d4d6945fbf835f4dfa504e944aea17"
+      url "https://github.com/jaxxstorm/connectme/releases/download/v0.0.2/connectme-v0.0.2-darwin-arm64.tar.gz"
+      sha256 "1180f2d8bda01babdc53b2fa5f165d76a7ff0a5fbd26aed22abc00b0251b67ed"
 
       def install
         bin.install "connectme"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/connectme/releases/download/v0.0.1/connectme-v0.0.1-darwin-amd64.tar.gz"
-      sha256 "5fffe79151dbcbedb36bd71055bf60f28aa9a0cee14f3f37bb1538ea5e140237"
+      url "https://github.com/jaxxstorm/connectme/releases/download/v0.0.2/connectme-v0.0.2-darwin-amd64.tar.gz"
+      sha256 "8da06783f1d57b8991f527ec16f836a50bb2a6aebb38223256655df05a00a6f2"
 
       def install
         bin.install "connectme"
@@ -28,16 +30,16 @@ class Connectme < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/connectme/releases/download/v0.0.1/connectme-v0.0.1-linux-amd64.tar.gz"
-      sha256 "2bb0953a168a8bfda4c089449a70c6a93aa05b0d3e417b6661d0d786117c7941"
+      url "https://github.com/jaxxstorm/connectme/releases/download/v0.0.2/connectme-v0.0.2-linux-amd64.tar.gz"
+      sha256 "a7e02ae13af7727bd89f48a7cd7a7249a3f1b11298803611b255c8e61589f9f8"
 
       def install
         bin.install "connectme"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/connectme/releases/download/v0.0.1/connectme-v0.0.1-linux-arm64.tar.gz"
-      sha256 "c2e7b5b42a942adec3c24abc0474bf19362c80d986f2718ad019bf7d2f444bdd"
+      url "https://github.com/jaxxstorm/connectme/releases/download/v0.0.2/connectme-v0.0.2-linux-arm64.tar.gz"
+      sha256 "a98096e83a44701c91dc1f2a69d89686ab14586f743c597d4525b3dfbe38e379"
 
       def install
         bin.install "connectme"
