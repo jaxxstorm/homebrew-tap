@@ -5,22 +5,22 @@
 class Connecti < Formula
   desc "Quickly connect to your cloud infrastructure"
   homepage "https://leebriggs.co.uk"
-  version "0.0.1"
+  version "0.0.2"
 
   depends_on "pulumi"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.1/connecti-v0.0.1-darwin-amd64.tar.gz"
-      sha256 "619d856a451309b186361e4385865e3b3aafa0db88ca8e79cfcdb355a936a02a"
+    if Hardware::CPU.arm?
+      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.2/connecti-v0.0.2-darwin-arm64.tar.gz"
+      sha256 "9598d1cacc5020c54137655ce0433ac05a071cd277974d7bb71dfb5138ec0b70"
 
       def install
         bin.install "connecti"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.1/connecti-v0.0.1-darwin-arm64.tar.gz"
-      sha256 "07c6f447b65aeb7f404ef24dbaaa53e7409084d12afa9f6465e34c49dca15741"
+    if Hardware::CPU.intel?
+      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.2/connecti-v0.0.2-darwin-amd64.tar.gz"
+      sha256 "1807606d9d47dbaffb41d0fd6ebd301509b17c7849eb2ac78ef1e0244365296c"
 
       def install
         bin.install "connecti"
@@ -30,16 +30,16 @@ class Connecti < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.1/connecti-v0.0.1-linux-amd64.tar.gz"
-      sha256 "681cc86f6c3b9421ce458a961475f852351e31c347bd606b3c9443e60e066ee1"
+      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.2/connecti-v0.0.2-linux-amd64.tar.gz"
+      sha256 "02736f779ea3b6b9eaa4cc4ec99cce7396bfecf3f98a51d9249ce9e65884cc4b"
 
       def install
         bin.install "connecti"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.1/connecti-v0.0.1-linux-arm64.tar.gz"
-      sha256 "07c6d97770f96ab48e8e0353fd686e8e34537a23016c437679810862c74d8e09"
+      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.2/connecti-v0.0.2-linux-arm64.tar.gz"
+      sha256 "89ae27efdd34d5daef1a42fc79f5ddfa90a7b156787e3c748968528b0edc7ce2"
 
       def install
         bin.install "connecti"
