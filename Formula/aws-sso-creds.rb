@@ -5,20 +5,20 @@
 class AwsSsoCreds < Formula
   desc "Helper utility to get temporary credentials from AWS SSO."
   homepage "https://leebriggs.co.uk"
-  version "1.4.0"
+  version "1.4.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.4.0/aws-sso-creds-v1.4.0-darwin-arm64.tar.gz"
-      sha256 "6e9256c331dcbe9100872a3028a27338b285ca7cf4c0d62a09e8e303f1d2b224"
+      url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.4.1/aws-sso-creds-v1.4.1-darwin-arm64.tar.gz"
+      sha256 "dafa0abe634943d548b9de3cd8e84bfdeec3cd52785b5ad8eeeed16a9c4dbb6b"
 
       def install
         bin.install "aws-sso-creds"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.4.0/aws-sso-creds-v1.4.0-darwin-amd64.tar.gz"
-      sha256 "1d0b10b046a19d348e9c5d436a97809bd5eddd858225ac21873d6dfd9618e93a"
+      url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.4.1/aws-sso-creds-v1.4.1-darwin-amd64.tar.gz"
+      sha256 "448c67e45c20d773de6502373a6ccca00729373e128426b07cf4b2ad5d171492"
 
       def install
         bin.install "aws-sso-creds"
@@ -27,17 +27,17 @@ class AwsSsoCreds < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.4.0/aws-sso-creds-v1.4.0-linux-arm64.tar.gz"
-      sha256 "59bcd5a868c0052435e3a1e63b6ce2994157a6f0e54d43bd59ed0cd0e88ca442"
+    if Hardware::CPU.intel?
+      url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.4.1/aws-sso-creds-v1.4.1-linux-amd64.tar.gz"
+      sha256 "a7f381f147766a852c232a16f30c8c223bcfc37b62a2a81972203499d1594e56"
 
       def install
         bin.install "aws-sso-creds"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.4.0/aws-sso-creds-v1.4.0-linux-amd64.tar.gz"
-      sha256 "50315e174eba91d9ce89dcea2ec808f9b42f7cd44a16ad933ca50bfa93289117"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jaxxstorm/aws-sso-creds/releases/download/v1.4.1/aws-sso-creds-v1.4.1-linux-arm64.tar.gz"
+      sha256 "6cd187897df6756a5df1c1d8eee0b0ef28539e7452bf954b939d316b5e9e4052"
 
       def install
         bin.install "aws-sso-creds"
