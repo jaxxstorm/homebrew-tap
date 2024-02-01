@@ -5,22 +5,22 @@
 class Connecti < Formula
   desc "Quickly connect to your cloud infrastructure"
   homepage "https://leebriggs.co.uk"
-  version "0.0.3"
+  version "0.0.4"
 
   depends_on "pulumi"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.3/connecti-v0.0.3-darwin-arm64.tar.gz"
-      sha256 "357f51e7624d5669bbbb1a89ad530ad2a25d74f228ba872de63a15aa7b222ecf"
+      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.4/connecti-v0.0.4-darwin-arm64.tar.gz"
+      sha256 "d81d5f56f095ae98f5b4f31cfaf20fae5ea1fb0b1d8cc0915bca8fdac9f7fe41"
 
       def install
         bin.install "connecti"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.3/connecti-v0.0.3-darwin-amd64.tar.gz"
-      sha256 "bb20d9a58bc06048427d354198ddd110364a8d00b76f5eebeb1f501e46601332"
+      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.4/connecti-v0.0.4-darwin-amd64.tar.gz"
+      sha256 "7d3c8b7f08dba85266da856d7a729f85f0e9d5b2ead4fb53f20cc7e6dc5b36a7"
 
       def install
         bin.install "connecti"
@@ -30,16 +30,16 @@ class Connecti < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.3/connecti-v0.0.3-linux-arm64.tar.gz"
-      sha256 "621c61210e9d29f66a721643844256629bb0b318068c29606a993327af42ae3f"
+      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.4/connecti-v0.0.4-linux-arm64.tar.gz"
+      sha256 "112bc406401bd31d7501e649368b49e0baca6a204c39e449d19dc30209c6a35b"
 
       def install
         bin.install "connecti"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.3/connecti-v0.0.3-linux-amd64.tar.gz"
-      sha256 "00b24fcff7693443826189495a1c8aef344f9e2513e1b568cd40791d40654424"
+      url "https://github.com/jaxxstorm/connecti/releases/download/v0.0.4/connecti-v0.0.4-linux-amd64.tar.gz"
+      sha256 "58d893f7896b6f690e69144bd9aae1307a34de049f096097f6c5e5592271e1d1"
 
       def install
         bin.install "connecti"
