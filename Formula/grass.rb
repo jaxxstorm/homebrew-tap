@@ -5,20 +5,20 @@
 class Grass < Formula
   desc "Search for keywords on social media sites."
   homepage "https://leebriggs.co.uk"
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
     on_intel do
-      url "https://github.com/jaxxstorm/grass/releases/download/v0.0.4/grass_Darwin_x86_64.tar.gz"
-      sha256 "c61ed7e3fc27ebe6692e7da8cc612c5b4e848ebc91eb04302988766505da7537"
+      url "https://github.com/jaxxstorm/grass/releases/download/v0.0.5/grass_Darwin_x86_64.tar.gz"
+      sha256 "e79720c67bed6fb8ee60e5309166f445c7e23de50bfc7c975c6905580390b874"
 
       def install
         bin.install "grass"
       end
     end
     on_arm do
-      url "https://github.com/jaxxstorm/grass/releases/download/v0.0.4/grass_Darwin_arm64.tar.gz"
-      sha256 "d77ae70dc7a5afb147c259a2100320b0bf9f1777ae28fb6d2e649d49176aca28"
+      url "https://github.com/jaxxstorm/grass/releases/download/v0.0.5/grass_Darwin_arm64.tar.gz"
+      sha256 "c928c094cac3523ac2cab5472df13f4fee5672b71cf4359d8c5e4c346e30b0f2"
 
       def install
         bin.install "grass"
@@ -29,8 +29,8 @@ class Grass < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jaxxstorm/grass/releases/download/v0.0.4/grass_Linux_x86_64.tar.gz"
-        sha256 "862f9182d09c2957550ebabe627961a791a82604d828c5b71d91534709c4e442"
+        url "https://github.com/jaxxstorm/grass/releases/download/v0.0.5/grass_Linux_x86_64.tar.gz"
+        sha256 "0a3c42d7214a2a88207410dce4038326eabe30cac5c5f010e6a8d697bafe3ebe"
 
         def install
           bin.install "grass"
@@ -39,8 +39,8 @@ class Grass < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jaxxstorm/grass/releases/download/v0.0.4/grass_Linux_arm64.tar.gz"
-        sha256 "48a3fe355452cf5fae9f2bf0f41adf7f41edba67d0c73ee03ff6e1e7aeed0f9d"
+        url "https://github.com/jaxxstorm/grass/releases/download/v0.0.5/grass_Linux_arm64.tar.gz"
+        sha256 "88d2f8035e8834289f879d6f3c725b77f594aade205e0964ee52e032a7338f55"
 
         def install
           bin.install "grass"
