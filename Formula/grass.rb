@@ -5,23 +5,23 @@
 class Grass < Formula
   desc "Search for keywords on social media sites."
   homepage "https://leebriggs.co.uk"
-  version "0.0.1"
+  version "0.0.7"
 
   on_macos do
     on_intel do
-      url "https://github.com/jaxxstorm/pedloy/releases/download/v0.0.1/pedloy_Darwin_x86_64.tar.gz"
-      sha256 "f7e5197e12041e41892c6f7d86731c2ea01d15adcb5c64366f73c21b05e5c831"
+      url "https://github.com/jaxxstorm/grass/releases/download/v0.0.7/grass_Darwin_x86_64.tar.gz"
+      sha256 "e81173a98152a703d3d1de1f8deabd2704e7f527a82bf32d9fe923df92331502"
 
       def install
-        bin.install "pedloy"
+        bin.install "grass"
       end
     end
     on_arm do
-      url "https://github.com/jaxxstorm/pedloy/releases/download/v0.0.1/pedloy_Darwin_arm64.tar.gz"
-      sha256 "962c29a7e43c51a384882d69b9ccc2ff0cc0a63a937f82a503610eacde68f873"
+      url "https://github.com/jaxxstorm/grass/releases/download/v0.0.7/grass_Darwin_arm64.tar.gz"
+      sha256 "787e96c32c4e6b74f852abd5318f52e3f0d1a6e60e4d1ee447d6926066bb7360"
 
       def install
-        bin.install "pedloy"
+        bin.install "grass"
       end
     end
   end
@@ -29,21 +29,21 @@ class Grass < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jaxxstorm/pedloy/releases/download/v0.0.1/pedloy_Linux_x86_64.tar.gz"
-        sha256 "072e530966fe15f19b660f328aa0378dd3b71b8631b2d6ac91f75ad45c197053"
+        url "https://github.com/jaxxstorm/grass/releases/download/v0.0.7/grass_Linux_x86_64.tar.gz"
+        sha256 "a53408e1d472ddb3e8d3b5c61003d33b55a6180e0435ec062d9f85488044d325"
 
         def install
-          bin.install "pedloy"
+          bin.install "grass"
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jaxxstorm/pedloy/releases/download/v0.0.1/pedloy_Linux_arm64.tar.gz"
-        sha256 "87d98a3257fda1a907b465695b3e8b3eeedc4741f750ef517bc1f3dc48f7eb73"
+        url "https://github.com/jaxxstorm/grass/releases/download/v0.0.7/grass_Linux_arm64.tar.gz"
+        sha256 "b59677b997aa6e45817f5893503f59d7dcffe5ddbd6d5723a043629270f498b5"
 
         def install
-          bin.install "pedloy"
+          bin.install "grass"
         end
       end
     end
