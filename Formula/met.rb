@@ -5,20 +5,20 @@
 class Met < Formula
   desc "Dynamically render prometheus metrics in your terminal."
   homepage "https://leebriggs.co.uk"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/met/releases/download/v0.0.3/met-v0.0.3-darwin-amd64.tar.gz"
-      sha256 "c6217f0f80ffa5447f296048bbdf9663bd2eb0cb56ce1b2276868a7fd233f5db"
+      url "https://github.com/jaxxstorm/met/releases/download/v0.0.4/met-v0.0.4-darwin-amd64.tar.gz"
+      sha256 "f92710c97e086dfc05fd9cdfdf8f84b326ea0914335f8f49e228d2a4af23e1d0"
 
       def install
         bin.install "met"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/met/releases/download/v0.0.3/met-v0.0.3-darwin-arm64.tar.gz"
-      sha256 "31fdc5743bb1219e61aebb570deae0f25001a26bdd7391fc5a290e9f71a42ce1"
+      url "https://github.com/jaxxstorm/met/releases/download/v0.0.4/met-v0.0.4-darwin-arm64.tar.gz"
+      sha256 "954e9377700e09e885ed3519875a3ee152c462bcaefcabe7f8d5f8b5c137fd02"
 
       def install
         bin.install "met"
@@ -29,8 +29,8 @@ class Met < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jaxxstorm/met/releases/download/v0.0.3/met-v0.0.3-linux-amd64.tar.gz"
-        sha256 "4b17552a941931d70759291d7ac58b44311534d3e443da0ecf6dc76372ca7218"
+        url "https://github.com/jaxxstorm/met/releases/download/v0.0.4/met-v0.0.4-linux-amd64.tar.gz"
+        sha256 "46ed5806d14bebaf6bc63a7aa7c51d63dfa6f5ee6402754e6ab49654660dedfc"
 
         def install
           bin.install "met"
@@ -39,8 +39,8 @@ class Met < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jaxxstorm/met/releases/download/v0.0.3/met-v0.0.3-linux-arm64.tar.gz"
-        sha256 "32b4146fdd19dece4e9016edea3b28912f441b32de615f8d0c59ab8d2ea2eaa7"
+        url "https://github.com/jaxxstorm/met/releases/download/v0.0.4/met-v0.0.4-linux-arm64.tar.gz"
+        sha256 "1a7915f871a051895d56e4b56265af19ae8cbaf0e0ded666b142f1e68417a6a0"
 
         def install
           bin.install "met"
