@@ -5,20 +5,20 @@
 class Stunner < Formula
   desc "A CLI tool to detect NAT type."
   homepage "https://leebriggs.co.uk"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.2/stunner-v0.0.2-darwin-amd64.tar.gz"
-      sha256 "e0ce4329f9fa35661f2cf2df96296d3636320eaefe5404fe71c74d928ddca596"
+      url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.3/stunner-v0.0.3-darwin-amd64.tar.gz"
+      sha256 "669517e6a2f2850a9558691aba0c6d52b36b7249b0b1235b90265b1697e339ca"
 
       def install
         bin.install "stunner"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.2/stunner-v0.0.2-darwin-arm64.tar.gz"
-      sha256 "494c963888b8fac11d2aff62807755531a0099cdb7bee3856f2e8f87b472f2fd"
+      url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.3/stunner-v0.0.3-darwin-arm64.tar.gz"
+      sha256 "a3b990e21790359b84834c1092eae3b6fc36fc2665f9075f08f71bd3fa53007e"
 
       def install
         bin.install "stunner"
@@ -29,8 +29,8 @@ class Stunner < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.2/stunner-v0.0.2-linux-amd64.tar.gz"
-        sha256 "2faaa0dc1c79a19b4675fd4a1cba2fa7bcf91b7a8350079b6d334b0cf6f094b2"
+        url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.3/stunner-v0.0.3-linux-amd64.tar.gz"
+        sha256 "e485938bd50c175682c052f968787f819d95173accb4c1f821f082c85ccefcb1"
 
         def install
           bin.install "stunner"
@@ -39,8 +39,8 @@ class Stunner < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.2/stunner-v0.0.2-linux-arm64.tar.gz"
-        sha256 "cba0017ae6ad1d1f50163d06aeb20d4520d187071222bab4719f065576219aa0"
+        url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.3/stunner-v0.0.3-linux-arm64.tar.gz"
+        sha256 "8d437ea1f3f6a55daf6d152cd2b73d2753d7b522f35c2aaefcc0c82368bde8f1"
 
         def install
           bin.install "stunner"
