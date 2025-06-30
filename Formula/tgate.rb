@@ -5,20 +5,20 @@
 class Tgate < Formula
   desc "A logging and monitoring proxy based on Tailscale server and funnel."
   homepage "https://leebriggs.co.uk"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.1/tgate-v0.0.1-darwin-amd64.tar.gz"
-      sha256 "fec2a0aa4efc303dd2ca8853e3d475e682d50120d30fd46b26f6c2d9c58bec45"
+      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.2/tgate-v0.0.2-darwin-amd64.tar.gz"
+      sha256 "a4c2ab2923d90e1e4ed27d31cc56c895c985fbcc6761893e4c0866d28bf00581"
 
       def install
         bin.install "tgate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.1/tgate-v0.0.1-darwin-arm64.tar.gz"
-      sha256 "c0ce826472bdd335baeaadab2be2ea3784bd15a5e833a17e16e301286e70ab93"
+      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.2/tgate-v0.0.2-darwin-arm64.tar.gz"
+      sha256 "fbca74c666384237f46628fa14642e7ccb1c0c569c2995af390ae586bbf841ab"
 
       def install
         bin.install "tgate"
@@ -28,15 +28,15 @@ class Tgate < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.1/tgate-v0.0.1-linux-amd64.tar.gz"
-      sha256 "2e4439420c425db0f8eedd869efead1f42604b360e7ae0773c501c11fec0fc01"
+      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.2/tgate-v0.0.2-linux-amd64.tar.gz"
+      sha256 "3c5f4750cafbb03465d9749063e88d48911ffa307241a14916ab73bde5de958f"
       def install
         bin.install "tgate"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.1/tgate-v0.0.1-linux-arm64.tar.gz"
-      sha256 "a902171443af3c21f9a8c79c2a3137b233f7f010373ad3bc22e8f52f38f1c9b8"
+      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.2/tgate-v0.0.2-linux-arm64.tar.gz"
+      sha256 "1e23031a902585e8e3b09217cf50ea1be05739ae867950e727c2c7660d50b2ee"
       def install
         bin.install "tgate"
       end
