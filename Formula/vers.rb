@@ -5,20 +5,20 @@
 class Vers < Formula
   desc "Calculate versions from Git repositories."
   homepage "https://leebriggs.co.uk"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/vers/releases/download/v0.0.1/vers-v0.0.1-darwin-amd64.tar.gz"
-      sha256 "f742db23dde0a7e336d90892f17d70399f8ca38fc02e599135cd63bbef27188e"
+      url "https://github.com/jaxxstorm/vers/releases/download/v0.0.2/vers-v0.0.2-darwin-amd64.tar.gz"
+      sha256 "7e0232ef1b52611f124fecaa255781a799e5fd9a41a624ddcd48d04d4e930837"
 
       def install
         bin.install "vers"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/vers/releases/download/v0.0.1/vers-v0.0.1-darwin-arm64.tar.gz"
-      sha256 "b15125fe8fda349f2ea29a92ec9972092fd0cc94ed8cc6d922aff86caa01899a"
+      url "https://github.com/jaxxstorm/vers/releases/download/v0.0.2/vers-v0.0.2-darwin-arm64.tar.gz"
+      sha256 "ceac1b35a22282c075370965d70117c65825e8303499d9c4986cdfc7a3d6f0ec"
 
       def install
         bin.install "vers"
@@ -28,15 +28,15 @@ class Vers < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/vers/releases/download/v0.0.1/vers-v0.0.1-linux-amd64.tar.gz"
-      sha256 "68a6d6b7abe3efa3a6087c6e0d08a5fda868d1c24d7979f6f6e621efbc3f1dfd"
+      url "https://github.com/jaxxstorm/vers/releases/download/v0.0.2/vers-v0.0.2-linux-amd64.tar.gz"
+      sha256 "cceb0b65c9e8223cbfeff7cfd3c22ec3737fc79554ebab3cc51d5be06d07743a"
       def install
         bin.install "vers"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/vers/releases/download/v0.0.1/vers-v0.0.1-linux-arm64.tar.gz"
-      sha256 "f5d7efa8fb2d8fbb7a99b409ff6802e2d1f344401fc2326dfa5564dffc67b7dc"
+      url "https://github.com/jaxxstorm/vers/releases/download/v0.0.2/vers-v0.0.2-linux-arm64.tar.gz"
+      sha256 "bd5ac0d557bec5591f8929bc969c8166358c218e967535eaf2a09dc8dba974da"
       def install
         bin.install "vers"
       end
