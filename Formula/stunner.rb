@@ -5,20 +5,20 @@
 class Stunner < Formula
   desc "A CLI tool to detect NAT type."
   homepage "https://leebriggs.co.uk"
-  version "0.0.9"
+  version "0.0.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.9/stunner-v0.0.9-darwin-amd64.tar.gz"
-      sha256 "0376a563a63bf2e9f2e8177608c82708ea33249b0ebb0a71341d50070e6ec8cb"
+      url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.10/stunner-v0.0.10-darwin-amd64.tar.gz"
+      sha256 "62d2131bfa41e315022cb8128ce2619253c0808228285da2c9b11e410693b27b"
 
       def install
         bin.install "stunner"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.9/stunner-v0.0.9-darwin-arm64.tar.gz"
-      sha256 "f3bd7c4422bef37b6be4366e99c441c00c8ff9736a7f63c47ffad09ec6b60985"
+      url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.10/stunner-v0.0.10-darwin-arm64.tar.gz"
+      sha256 "7b32fabc648a8d4544e13d9f6a843d9d294a799bda9756f34c5ec8725f87cebe"
 
       def install
         bin.install "stunner"
@@ -28,15 +28,15 @@ class Stunner < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.9/stunner-v0.0.9-linux-amd64.tar.gz"
-      sha256 "7b8e636c98cb57330a76f6ab36827f146509b7de99398c9b98e4c197a63bb25c"
+      url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.10/stunner-v0.0.10-linux-amd64.tar.gz"
+      sha256 "5d28cb019e894b8f13fea2b26ed845ad5c7f77e98792d06b147cb51360257201"
       def install
         bin.install "stunner"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.9/stunner-v0.0.9-linux-arm64.tar.gz"
-      sha256 "2eddb726581d62cc96c524bbacadc8cb5d5a3621d211acd1b7992d9a64bbe516"
+      url "https://github.com/jaxxstorm/stunner/releases/download/v0.0.10/stunner-v0.0.10-linux-arm64.tar.gz"
+      sha256 "8453d2783c19269135689469971d4559d6dbaff193052620d0dca5c6c9ff371a"
       def install
         bin.install "stunner"
       end
