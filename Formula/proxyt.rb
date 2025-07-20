@@ -5,20 +5,20 @@
 class Proxyt < Formula
   desc "Easily proxy the Tailscale login API for blocked networks."
   homepage "https://github.com/jaxxstorm/proxyt"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.1/proxyt_0.0.1_darwin_amd64.tar.gz"
-      sha256 "3bd46fb1ee4ffce97858a02f749bf1299afbe0305953e08c8cedd01287060a5a"
+      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.2/proxyt_0.0.2_darwin_amd64.tar.gz"
+      sha256 "f74b7441cd6ab874f6533715f4fbe87ea66376a74811a30ec1a912f0954386d6"
 
       def install
         bin.install "proxyt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.1/proxyt_0.0.1_darwin_arm64.tar.gz"
-      sha256 "1b8f35e2c1352feeabda0f308626d00fbdb46055d2eefeb184f2affc5bf85a9f"
+      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.2/proxyt_0.0.2_darwin_arm64.tar.gz"
+      sha256 "56feb072d24a9b1a0057f2be0aaad05227447abdb04833c840ffd78d62520ece"
 
       def install
         bin.install "proxyt"
@@ -28,15 +28,15 @@ class Proxyt < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.1/proxyt_0.0.1_linux_amd64.tar.gz"
-      sha256 "639e5d8b1c27f0c0223d9629bbd120558c613ac2d7d07445281d21082277f648"
+      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.2/proxyt_0.0.2_linux_amd64.tar.gz"
+      sha256 "79cebab2a9cf315c2b4a8d53f984d5b7b9fecc78ce70c458872eb4770ba8ab3c"
       def install
         bin.install "proxyt"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.1/proxyt_0.0.1_linux_arm64.tar.gz"
-      sha256 "5f778440a7e132c0f218079e57d0589431b115bd1611dff3906f47b8742901fe"
+      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.2/proxyt_0.0.2_linux_arm64.tar.gz"
+      sha256 "00ed551fb0172b90c371b63544a88b2a28324d6479e38908c393169d8ffb02e8"
       def install
         bin.install "proxyt"
       end
