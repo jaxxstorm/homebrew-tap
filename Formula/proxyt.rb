@@ -10,7 +10,7 @@ class Proxyt < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.5/proxyt_0.0.5_darwin_amd64.tar.gz"
-      sha256 "73dddc7ddbad02422ab42832944c0e217bc98011fc9b1535c6a98c6d40ac2ad2"
+      sha256 "7af8e58a23adf45ec87020a05b64b89c66f708c9bcf6f04379fbd20114497b8a"
 
       def install
         bin.install "proxyt"
@@ -18,7 +18,7 @@ class Proxyt < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.5/proxyt_0.0.5_darwin_arm64.tar.gz"
-      sha256 "b181444bff8e01ba8d6382707867ebc1ce8af6c0a5f58a7c16e3762c9d0e6658"
+      sha256 "c005fc3201d78b216bfcbd7c10deb7a29864e4c23183660a387eb0be876201b1"
 
       def install
         bin.install "proxyt"
@@ -29,14 +29,14 @@ class Proxyt < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.5/proxyt_0.0.5_linux_amd64.tar.gz"
-      sha256 "591fd4c8f1a28bc0db3fb04afeba98e5c63ed3ad13ab16997029ede3c1a28b98"
+      sha256 "7edf1252d83a000e9925400f447316eff23c92470897236f005c499a35868a5d"
       def install
         bin.install "proxyt"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.5/proxyt_0.0.5_linux_arm64.tar.gz"
-      sha256 "75cca232e342cab82033e0fc95ede628f294d0d235226d4fa9b4295d9dd79059"
+      sha256 "a5dd54653b0c15278895dcf9d138a5fdc2e8dddf7c7857566b4d31b8f7fb5178"
       def install
         bin.install "proxyt"
       end
