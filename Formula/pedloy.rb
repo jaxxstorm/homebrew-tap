@@ -5,20 +5,20 @@
 class Pedloy < Formula
   desc "Search for keywords on social media sites."
   homepage "https://leebriggs.co.uk"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
-    on_intel do
-      url "https://github.com/jaxxstorm/pedloy/releases/download/v0.0.2/pedloy_Darwin_x86_64.tar.gz"
-      sha256 "0f87d7d855562a09573b445befdd32a0dda67293858a1c998a90a25246823238"
+    if Hardware::CPU.intel?
+      url "https://github.com/jaxxstorm/pedloy/releases/download/v0.0.3/pedloy_Darwin_x86_64.tar.gz"
+      sha256 "4aad2e19b6b7f0013781cd6fe158b4f987d0f91a6fc0122624bce97bff838692"
 
       def install
         bin.install "pedloy"
       end
     end
-    on_arm do
-      url "https://github.com/jaxxstorm/pedloy/releases/download/v0.0.2/pedloy_Darwin_arm64.tar.gz"
-      sha256 "e3d5954ae12f476b104d5c843f900c183ba9fa7f566771674370cc0f07190066"
+    if Hardware::CPU.arm?
+      url "https://github.com/jaxxstorm/pedloy/releases/download/v0.0.3/pedloy_Darwin_arm64.tar.gz"
+      sha256 "fb6be21367f8a16b155449010f2b41545492b8f56ef598ee3178ae4c3016d115"
 
       def install
         bin.install "pedloy"
@@ -27,24 +27,18 @@ class Pedloy < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/jaxxstorm/pedloy/releases/download/v0.0.2/pedloy_Linux_x86_64.tar.gz"
-        sha256 "98bec7064025131cc26f574433a0eb6438b285dd66508109648e7338349db1a5"
-
-        def install
-          bin.install "pedloy"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/jaxxstorm/pedloy/releases/download/v0.0.3/pedloy_Linux_x86_64.tar.gz"
+      sha256 "e565abe73a4825b77502051e67507d28e59ab0aade31790c02bca0ada8eae3c3"
+      def install
+        bin.install "pedloy"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/jaxxstorm/pedloy/releases/download/v0.0.2/pedloy_Linux_arm64.tar.gz"
-        sha256 "1fabf1e8e8ee96214e94e73b835349067690e9dcc76c77ab540b8e6711ed3357"
-
-        def install
-          bin.install "pedloy"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/jaxxstorm/pedloy/releases/download/v0.0.3/pedloy_Linux_arm64.tar.gz"
+      sha256 "0ced4129e11dc0806d9fd77a3e7f205027e9f44c6a51a1c0d138143b1f10129f"
+      def install
+        bin.install "pedloy"
       end
     end
   end
