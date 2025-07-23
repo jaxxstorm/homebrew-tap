@@ -5,20 +5,20 @@
 class Tscli < Formula
   desc "Interact with the Tailscale API from a CLI."
   homepage "https://github.com/jaxxstorm/tscli"
-  version "0.0.13"
+  version "0.0.14"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/tscli/releases/download/v0.0.13/tscli_0.0.13_darwin_amd64.tar.gz"
-      sha256 "ae0f1fb394e3798ffae3efde4deec3554ad214e96abfbfaf25fc224e564389d7"
+      url "https://github.com/jaxxstorm/tscli/releases/download/v0.0.14/tscli_0.0.14_darwin_amd64.tar.gz"
+      sha256 "38e66e1bc3b17f21bd784ffd4cfb0a5c5243734f17b7e50f8bdfb75970e17031"
 
       def install
         bin.install "tscli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/tscli/releases/download/v0.0.13/tscli_0.0.13_darwin_arm64.tar.gz"
-      sha256 "cd6d93d6072961571bf6a77a29442e5b00902af9c38bd2cc0f55dcdcc64fa686"
+      url "https://github.com/jaxxstorm/tscli/releases/download/v0.0.14/tscli_0.0.14_darwin_arm64.tar.gz"
+      sha256 "a4ae9c3854ba3184761c0902d12f6d84a88a313b075589447948eff0a70b035a"
 
       def install
         bin.install "tscli"
@@ -28,15 +28,15 @@ class Tscli < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/tscli/releases/download/v0.0.13/tscli_0.0.13_linux_amd64.tar.gz"
-      sha256 "f4e9883a025e0c7239b3b4a934b30856213dbce0cfd70f3e2db4d90c1bdb1e4a"
+      url "https://github.com/jaxxstorm/tscli/releases/download/v0.0.14/tscli_0.0.14_linux_amd64.tar.gz"
+      sha256 "5d7bd108ee18c2290584723dc1c5abcdff85fe1759d57edb892c450a0f837a80"
       def install
         bin.install "tscli"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/tscli/releases/download/v0.0.13/tscli_0.0.13_linux_arm64.tar.gz"
-      sha256 "e9ffa68e3741b56c49f2c0aca95c5c1f5836a03337f6d8098b5dd38b6c6ad38c"
+      url "https://github.com/jaxxstorm/tscli/releases/download/v0.0.14/tscli_0.0.14_linux_arm64.tar.gz"
+      sha256 "b662ba6f2dd734c9b47eb6f9c6d9bfcc225e84694b82037e9e0ff194586508d8"
       def install
         bin.install "tscli"
       end
