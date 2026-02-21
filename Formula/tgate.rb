@@ -5,20 +5,20 @@
 class Tgate < Formula
   desc "A logging and monitoring proxy based on Tailscale server and funnel."
   homepage "https://leebriggs.co.uk"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.2/tgate-v0.0.2-darwin-amd64.tar.gz"
-      sha256 "a4c2ab2923d90e1e4ed27d31cc56c895c985fbcc6761893e4c0866d28bf00581"
+      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.3/tgate-v0.0.3-darwin-amd64.tar.gz"
+      sha256 "8236d3186c3c8d5e2bd8754cff8668660594a2c8c53a7823765d96540f4adb83"
 
       def install
         bin.install "tgate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.2/tgate-v0.0.2-darwin-arm64.tar.gz"
-      sha256 "fbca74c666384237f46628fa14642e7ccb1c0c569c2995af390ae586bbf841ab"
+      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.3/tgate-v0.0.3-darwin-arm64.tar.gz"
+      sha256 "e91e296436a05792412d2f897c68a7bd24aa2698f1417ca3d16aa00cf6c2031f"
 
       def install
         bin.install "tgate"
@@ -27,16 +27,16 @@ class Tgate < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.2/tgate-v0.0.2-linux-amd64.tar.gz"
-      sha256 "3c5f4750cafbb03465d9749063e88d48911ffa307241a14916ab73bde5de958f"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.3/tgate-v0.0.3-linux-amd64.tar.gz"
+      sha256 "0e393462c9190983e09be7c089ec890bff0a7883b557cd4f86113f280bd6d548"
       def install
         bin.install "tgate"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.2/tgate-v0.0.2-linux-arm64.tar.gz"
-      sha256 "1e23031a902585e8e3b09217cf50ea1be05739ae867950e727c2c7660d50b2ee"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.3/tgate-v0.0.3-linux-arm64.tar.gz"
+      sha256 "d60efb65fcfd12f4544263596a4e0c7a47c027637d887c22636c81d4f730b642"
       def install
         bin.install "tgate"
       end
