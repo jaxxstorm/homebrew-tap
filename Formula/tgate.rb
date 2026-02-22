@@ -5,40 +5,40 @@
 class Tgate < Formula
   desc "A logging and monitoring proxy based on Tailscale server and funnel."
   homepage "https://leebriggs.co.uk"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.3/tgate-v0.0.3-darwin-amd64.tar.gz"
-      sha256 "8236d3186c3c8d5e2bd8754cff8668660594a2c8c53a7823765d96540f4adb83"
+      url "https://github.com/jaxxstorm/portal/releases/download/v0.0.4/portal-v0.0.4-darwin-amd64.tar.gz"
+      sha256 "3caf71dbf2ade97f4914b7dbf8568a62c98c0d00de7bad11d71505aff3eeb407"
 
-      def install
-        bin.install "tgate"
+      define_method(:install) do
+        bin.install "portal"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.3/tgate-v0.0.3-darwin-arm64.tar.gz"
-      sha256 "e91e296436a05792412d2f897c68a7bd24aa2698f1417ca3d16aa00cf6c2031f"
+      url "https://github.com/jaxxstorm/portal/releases/download/v0.0.4/portal-v0.0.4-darwin-arm64.tar.gz"
+      sha256 "577810c9d114fb564c33b1cb99802b5bbeaf1cd8c59bd29bb87e90bf45bc0290"
 
-      def install
-        bin.install "tgate"
+      define_method(:install) do
+        bin.install "portal"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.3/tgate-v0.0.3-linux-amd64.tar.gz"
-      sha256 "0e393462c9190983e09be7c089ec890bff0a7883b557cd4f86113f280bd6d548"
-      def install
-        bin.install "tgate"
+      url "https://github.com/jaxxstorm/portal/releases/download/v0.0.4/portal-v0.0.4-linux-amd64.tar.gz"
+      sha256 "dd25e5de4de519699ceb5caf91b8399ebb60ea79f0350fbeed33992321b923b5"
+      define_method(:install) do
+        bin.install "portal"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/tgate/releases/download/v0.0.3/tgate-v0.0.3-linux-arm64.tar.gz"
-      sha256 "d60efb65fcfd12f4544263596a4e0c7a47c027637d887c22636c81d4f730b642"
-      def install
-        bin.install "tgate"
+      url "https://github.com/jaxxstorm/portal/releases/download/v0.0.4/portal-v0.0.4-linux-arm64.tar.gz"
+      sha256 "ec19203f7c126d7f235b3f1e7c166613d9068379e8145dceec6c5e47883e270b"
+      define_method(:install) do
+        bin.install "portal"
       end
     end
   end
