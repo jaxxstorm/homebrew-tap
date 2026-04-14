@@ -5,20 +5,20 @@
 class Tscli < Formula
   desc "Interact with the Tailscale API from a CLI."
   homepage "https://github.com/jaxxstorm/tscli"
-  version "0.6.0"
+  version "0.6.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/tscli/releases/download/v0.6.0/tscli_0.6.0_darwin_amd64.tar.gz"
-      sha256 "e5a976139368ada36ceaa1212351034128cb4a3dfb35c84ad5318817c7605f5c"
+      url "https://github.com/jaxxstorm/tscli/releases/download/v0.6.1/tscli_0.6.1_darwin_amd64.tar.gz"
+      sha256 "2ca52e28aee0d368fbfc424443ec2e4898c720df18f084fbc1ffd4610b906e75"
 
       define_method(:install) do
         bin.install "tscli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/tscli/releases/download/v0.6.0/tscli_0.6.0_darwin_arm64.tar.gz"
-      sha256 "8910f264cca3a45232e64392bdb14d2ad254222457976939b06fb19b429085fb"
+      url "https://github.com/jaxxstorm/tscli/releases/download/v0.6.1/tscli_0.6.1_darwin_arm64.tar.gz"
+      sha256 "1d5a8afed0fbd3cf21faaf38fc16dcf66f680be192a50c0bff2a090166e35c14"
 
       define_method(:install) do
         bin.install "tscli"
@@ -28,15 +28,15 @@ class Tscli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/tscli/releases/download/v0.6.0/tscli_0.6.0_linux_amd64.tar.gz"
-      sha256 "4a72ff22b2fbcb091ab85cf1b6dfb0586bd02b3e5c84e931efd139424186815e"
+      url "https://github.com/jaxxstorm/tscli/releases/download/v0.6.1/tscli_0.6.1_linux_amd64.tar.gz"
+      sha256 "fddadc48a4db78b0b2ea43fe2345743c1a64b212ee903065f269044422492210"
       define_method(:install) do
         bin.install "tscli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/tscli/releases/download/v0.6.0/tscli_0.6.0_linux_arm64.tar.gz"
-      sha256 "424e6df7819c90f80b165f21d70cd716a05e6b1e5066b4d0dd7c1175d67fe09f"
+      url "https://github.com/jaxxstorm/tscli/releases/download/v0.6.1/tscli_0.6.1_linux_arm64.tar.gz"
+      sha256 "f81cb1d4edd104394a2eba07e6525444bd6e340dca780c13bcc9a02c7c147c2f"
       define_method(:install) do
         bin.install "tscli"
       end
