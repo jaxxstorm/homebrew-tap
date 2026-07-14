@@ -4,22 +4,22 @@ cask "penda" do
 
   on_macos do
     on_intel do
-      sha256 "c28945909c10f35c91f5549fd1e0708b8919b3871e3f6899f8717b6f71167c0c"
+      sha256 "4f7e455c718804bc644d95ef580b85fb10bea33b2ad93713a6024dc530319a99"
       url "https://github.com/jaxxstorm/penda/releases/download/v#{version}/penda_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "4f57cc21a1363b554a82469a6095c9ebd79ecb52de5f3d267076ed1bc131de0d"
+      sha256 "098650b8143b7a3bf6563ed20f64126abbbde360ddbb18c1be3106e40f777743"
       url "https://github.com/jaxxstorm/penda/releases/download/v#{version}/penda_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "9c055f555a45f63548738b71896a0b4eb54f90bbac5fa47b0dabab7776000abe"
+      sha256 "234a7a25f58f02e1859c699f69bf7e296a222b5424d39cf0a652234e01959622"
       url "https://github.com/jaxxstorm/penda/releases/download/v#{version}/penda_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "fb305ee505e5a09e4190ebe7ab6e9fb794e4aa65b4dd07ba6ffa4c79f2140f19"
+      sha256 "b4812750aea76b5bb7053097e67cbac31156bdbd21329c5e4e3b6ed315edc067"
       url "https://github.com/jaxxstorm/penda/releases/download/v#{version}/penda_#{version}_linux_arm64.tar.gz"
     end
   end
