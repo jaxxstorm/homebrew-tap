@@ -5,20 +5,20 @@
 class Proxyt < Formula
   desc "Easily proxy the Tailscale login API for blocked networks."
   homepage "https://github.com/jaxxstorm/proxyt"
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.6/proxyt_0.0.6_darwin_amd64.tar.gz"
-      sha256 "07d97f6d65b02b21625c979c02194a43ffe6ff55362de9f965a8aafdf31cda70"
+      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.7/proxyt_0.0.7_darwin_amd64.tar.gz"
+      sha256 "fea8700bc09b8b10bfc1e6a1c0d584aa2ccfd11bf5df88331a1124c8dbec3493"
 
       define_method(:install) do
         bin.install "proxyt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.6/proxyt_0.0.6_darwin_arm64.tar.gz"
-      sha256 "957bf1c24c8c930c346775b22b50713a8d4edd16ea30bd0fad35ae2007cf13dd"
+      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.7/proxyt_0.0.7_darwin_arm64.tar.gz"
+      sha256 "50b611ca426c13c5c0e65c84b5e3c81a6919a10af0efd8df6ad40740059104a2"
 
       define_method(:install) do
         bin.install "proxyt"
@@ -28,15 +28,15 @@ class Proxyt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.6/proxyt_0.0.6_linux_amd64.tar.gz"
-      sha256 "39d5d8698795ecd35a9f708dd7d4315fb31aa9de3527b2503d98f34b7211a6c2"
+      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.7/proxyt_0.0.7_linux_amd64.tar.gz"
+      sha256 "ac08ac4c63f2405c954d16b21253303525f52455123cdc1b50b6a4fa14a71c10"
       define_method(:install) do
         bin.install "proxyt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.6/proxyt_0.0.6_linux_arm64.tar.gz"
-      sha256 "1ae17f47e034892370775ecacc6ae47d1ed1e6589dea0612a67786f976cdbaa4"
+      url "https://github.com/jaxxstorm/proxyt/releases/download/v0.0.7/proxyt_0.0.7_linux_arm64.tar.gz"
+      sha256 "bcec44c88ab620c0c1c79ed100549046f1b5729126e5c523c4605c338bd465f6"
       define_method(:install) do
         bin.install "proxyt"
       end
