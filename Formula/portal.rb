@@ -5,20 +5,20 @@
 class Portal < Formula
   desc "A logging and monitoring proxy based on Tailscale server and funnel."
   homepage "https://leebriggs.co.uk"
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/portal/releases/download/v0.0.5/portal-v0.0.5-darwin-amd64.tar.gz"
-      sha256 "d7541f6e334ae3ef25c3be018a563140c502c98bcca5058ff156a93cd612c243"
+      url "https://github.com/jaxxstorm/portal/releases/download/v0.0.6/portal-v0.0.6-darwin-amd64.tar.gz"
+      sha256 "d3ee076d63b968e7bc1e34f9506080ad3a2c5fd155b5c1cda1e29349da60c751"
 
       define_method(:install) do
         bin.install "portal"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/portal/releases/download/v0.0.5/portal-v0.0.5-darwin-arm64.tar.gz"
-      sha256 "1e473720e0224798d1c4d1e8602e365ab4164ae0db3960981a16d231b29f33d8"
+      url "https://github.com/jaxxstorm/portal/releases/download/v0.0.6/portal-v0.0.6-darwin-arm64.tar.gz"
+      sha256 "18c3213e117cf52c26ee4382b4d50520ca066f506fe4382e2f546dfab9d5484b"
 
       define_method(:install) do
         bin.install "portal"
@@ -28,15 +28,15 @@ class Portal < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/portal/releases/download/v0.0.5/portal-v0.0.5-linux-amd64.tar.gz"
-      sha256 "84f7cc9029a29927c6d7b822e55379ecc7e269fc25a4d1395f57b40dee199acd"
+      url "https://github.com/jaxxstorm/portal/releases/download/v0.0.6/portal-v0.0.6-linux-amd64.tar.gz"
+      sha256 "4b77f4adc80d217d8da5f79613cecc1b7fcdd0b870f97e4feb73937c103c4b4d"
       define_method(:install) do
         bin.install "portal"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/portal/releases/download/v0.0.5/portal-v0.0.5-linux-arm64.tar.gz"
-      sha256 "2409cff1c288739ffe9ea544a515083dd8e85d7cce6bc80b64c3c25ba8dfe619"
+      url "https://github.com/jaxxstorm/portal/releases/download/v0.0.6/portal-v0.0.6-linux-arm64.tar.gz"
+      sha256 "867de498f2c9afc7e69c2470f60b952dd27215d8753400d614279acec1efa97d"
       define_method(:install) do
         bin.install "portal"
       end
