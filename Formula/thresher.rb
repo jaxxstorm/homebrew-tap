@@ -5,21 +5,21 @@
 class Thresher < Formula
   desc "Decode Tailscale debug captures and analyze packet streams."
   homepage "https://github.com/jaxxstorm/thresher"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/thresher/releases/download/v0.0.1/thresher_0.0.1_darwin_amd64.tar.gz"
-      sha256 "585ed5b80ecc0235049b45997c64c813de85ec4d3f47e5cb012d55e154106f6b"
+      url "https://github.com/jaxxstorm/thresher/releases/download/v0.0.2/thresher_0.0.2_darwin_amd64.tar.gz"
+      sha256 "ab97adf26ecb09d07549429ddc0bae12fc98a50e4e2fcf4d4887cdadc113cb01"
 
       define_method(:install) do
         bin.install "thresher"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/thresher/releases/download/v0.0.1/thresher_0.0.1_darwin_arm64.tar.gz"
-      sha256 "95879597e70aa05bdac7312b8cc3f0131fb50c9e0400996a8cdae8feffd641d5"
+      url "https://github.com/jaxxstorm/thresher/releases/download/v0.0.2/thresher_0.0.2_darwin_arm64.tar.gz"
+      sha256 "1b137c4409696a728f9c6bc49002eb6bd7ff9d90bd68aacb0d390dcdc989c304"
 
       define_method(:install) do
         bin.install "thresher"
@@ -29,15 +29,15 @@ class Thresher < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/thresher/releases/download/v0.0.1/thresher_0.0.1_linux_amd64.tar.gz"
-      sha256 "32cd982f31c4e5983ad70739fcbf122b30b2b8716007f92c4e59a121ce631c3a"
+      url "https://github.com/jaxxstorm/thresher/releases/download/v0.0.2/thresher_0.0.2_linux_amd64.tar.gz"
+      sha256 "a26eed90608e559e37a5123eaada74425aaeebc90e9bd8d36aa82a006c0b9d4f"
       define_method(:install) do
         bin.install "thresher"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/thresher/releases/download/v0.0.1/thresher_0.0.1_linux_arm64.tar.gz"
-      sha256 "c831c95598b4d1401b9e98fdcde225591a07c46c8de93b0cce4580300377834e"
+      url "https://github.com/jaxxstorm/thresher/releases/download/v0.0.2/thresher_0.0.2_linux_arm64.tar.gz"
+      sha256 "9e81bef980f186d8d0cdfa973cc0778bff342ec3c8be526f5b6da8034b801bfc"
       define_method(:install) do
         bin.install "thresher"
       end
