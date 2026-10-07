@@ -5,20 +5,20 @@
 class TailscaleMcp < Formula
   desc "An MCP server for Tailscale."
   homepage "https://leebriggs.co.uk"
-  version "0.0.11"
+  version "0.0.12"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jaxxstorm/tailscale-mcp/releases/download/v0.0.11/tailscale-mcp-v0.0.11-darwin-amd64.tar.gz"
-      sha256 "87d811a8d2d03e1b8f464f92b723c2bf41c0fa786106f7a57c7885375d5a581d"
+      url "https://github.com/jaxxstorm/tailscale-mcp/releases/download/v0.0.12/tailscale-mcp-v0.0.12-darwin-amd64.tar.gz"
+      sha256 "0885b9b26e523f7de92192037151479b687bf06cde73e130eac560fb99144fc5"
 
       define_method(:install) do
         bin.install "tailscale-mcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jaxxstorm/tailscale-mcp/releases/download/v0.0.11/tailscale-mcp-v0.0.11-darwin-arm64.tar.gz"
-      sha256 "ebfa8825232efaf5387207a79b2df3d693f127e8e0be0edb6fd9186d816b9dd4"
+      url "https://github.com/jaxxstorm/tailscale-mcp/releases/download/v0.0.12/tailscale-mcp-v0.0.12-darwin-arm64.tar.gz"
+      sha256 "d69ce5874390a528c63812994e28b19a1cdd90ec69205a5e9cc20ec06e4388f1"
 
       define_method(:install) do
         bin.install "tailscale-mcp"
@@ -28,15 +28,15 @@ class TailscaleMcp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/tailscale-mcp/releases/download/v0.0.11/tailscale-mcp-v0.0.11-linux-amd64.tar.gz"
-      sha256 "9a6de99fedc39b7ff5bb3ec36b6e81aa5b118543faf4fe0cf9e601a5f6d3114f"
+      url "https://github.com/jaxxstorm/tailscale-mcp/releases/download/v0.0.12/tailscale-mcp-v0.0.12-linux-amd64.tar.gz"
+      sha256 "795423b636b12bba85100e0a8cfc3e8fd68315ba8e5d5340eaf36df2555a162b"
       define_method(:install) do
         bin.install "tailscale-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jaxxstorm/tailscale-mcp/releases/download/v0.0.11/tailscale-mcp-v0.0.11-linux-arm64.tar.gz"
-      sha256 "d9d9ff7ca07776d5e1366e58fb681b95033d6bd0181d738badf21e6688302eef"
+      url "https://github.com/jaxxstorm/tailscale-mcp/releases/download/v0.0.12/tailscale-mcp-v0.0.12-linux-arm64.tar.gz"
+      sha256 "014b2f10610c86b5b7e1696a06bf2d821baec518b47c2f7f7d563ac80340adde"
       define_method(:install) do
         bin.install "tailscale-mcp"
       end
